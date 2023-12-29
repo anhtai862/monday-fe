@@ -1,8 +1,11 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route } from "react-router-dom";
+import Signup from "./pages/signup/Signup";
 function App() {
   return (
     <>
-      <Routes></Routes>
+      <Routes>
+        <Route path="/" element={<Signup />}></Route>
+      </Routes>
     </>
   );
 }
