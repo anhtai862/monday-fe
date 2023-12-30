@@ -1,17 +1,23 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 function Signup() {
+  const navigation = useNavigate();
+  const handleRegister = () => {
+    navigation(`/CreateAccount`);
+  };
+
   return (
-    <div className=" font-popi tablet:grid-cols-5 grid h-screen ">
-      <div className=" tablet:col-span-3 grid items-center  justify-center bg-white px-4 text-center">
+    <div className=" grid h-screen font-popi tablet:grid-cols-5 ">
+      <div className=" grid items-center justify-center  bg-white px-4 text-center tablet:col-span-3">
         <div className="  tablet:w-[418px] tablet:px-1  ">
-          <h1 className="tablet:pb-4  tablet:text-2xl laptop:text-3xl pb-2 text-xl font-medium">
+          <h1 className="pb-2  text-xl font-medium tablet:pb-4 tablet:text-2xl laptop:text-3xl">
             Welcome to monday.com
           </h1>
-          <p className="tablet:pb-12 laptop:text-base tablet:text-sm pb-8 text-xs">
+          <p className="pb-8 text-xs tablet:pb-12 tablet:text-sm laptop:text-base">
             Get started - it's free. No credit card needed.
           </p>
-          <button className="laptop:text-base tablet:text-sm flex w-full items-center justify-center rounded border border-solid border-gray-300 px-4  py-2 text-xs  hover:bg-[#ccc] ">
+          <button className="flex w-full items-center justify-center rounded border border-solid border-gray-300 px-4 py-2 text-xs  hover:bg-[#ccc] tablet:text-sm  laptop:text-base ">
             <img
               src="https://dapulse-res.cloudinary.com/image/upload/remote_logos/995426/google-icon.svg"
               alt="Continue with Google"
@@ -26,13 +32,16 @@ function Signup() {
           </div>
           <input
             type="email"
-            className="  laptop:text-base tablet:text-sm w-full rounded border border-solid border-gray-300 px-4  py-2 text-xs  outline-1 outline-blue-500 hover:border-gray-500 "
+            className="  w-full rounded border border-solid border-gray-300 px-4 py-2 text-xs  outline-1 outline-blue-500  hover:border-gray-500 tablet:text-sm laptop:text-base "
             placeholder="name@company.com"
           />
-          <button className="laptop:text-base tablet:text-sm mb-6 mt-4 w-full rounded bg-[#0073ea] px-4 py-2 text-xs  text-white  hover:bg-opacity-30 ">
+          <button
+            onClick={handleRegister}
+            className="mb-6 mt-4 w-full rounded bg-[#0073ea] px-4 py-2 text-xs text-white hover:bg-opacity-30  tablet:text-sm  laptop:text-base "
+          >
             Continue
           </button>
-          <p className="laptop:text-base tablet:text-sm text-xs ">
+          <p className="text-xs tablet:text-sm laptop:text-base ">
             By proceeding, you agree to the
             <a
               href="https://monday.com/l/fr/le-juridique/tos/"
@@ -50,15 +59,15 @@ function Signup() {
           </p>
         </div>
         <div className="">
-          <p className=" laptop:text-base tablet:text-sm text-center text-xs ">
+          <p className=" text-center text-xs tablet:text-sm laptop:text-base ">
             Already have an account?
-            <a href="Log in" className="ml-1 text-[#1f76c2]">
+            <a to="log in" className="ml-1 text-[#1f76c2]">
               Log in
             </a>
           </p>
         </div>
       </div>
-      <div className=" tablet:col-span-2  tablet:block hidden h-full justify-center bg-[#6161ff]">
+      <div className=" hidden  h-full justify-center bg-[#6161ff] tablet:col-span-2 tablet:block">
         <div className="h-full bg-[url(https://dapulse-res.cloudinary.com/image/upload/monday_platform/signup/signup-right-side-assets-new-flow/welcome-to-monday.png)] bg-contain bg-center bg-no-repeat"></div>
       </div>
     </div>
