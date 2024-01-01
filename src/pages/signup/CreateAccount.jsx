@@ -1,20 +1,26 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import BtnContinue from "../../components/BtnContinue";
 import InputForm from "../../components/InputForm";
 
 function CreateAccount() {
+  const navigation = useNavigate();
+  const handleContinue = () => {
+    navigation(`/SignupPageThird`);
+  };
   return (
-    <div className=" grid h-screen font-popi tablet:grid-cols-5 ">
-      <div className=" destop:mx-32  grid items-center justify-center  bg-white text-center tablet:col-span-3 tablet:mx-5 tablet:my-16 tablet:block tablet:justify-start laptop:relative laptop:mx-20 laptop:text-left">
+    <div className=" grid h-screen tablet:grid-cols-5 ">
+      <div className=" destop:mx-32 font-figtree  grid items-center justify-center  bg-white text-center tablet:col-span-3 tablet:mx-5 tablet:my-16 tablet:block tablet:justify-start laptop:relative laptop:mx-20 laptop:text-left">
         <div className="laptop:text-left ">
           <img
             src="https://cdn.monday.com/images/logos/logo-full-big.png"
             alt="monday"
             className="inline-block h-6 tablet:h-10"
           />
-          <h1 className="pb-4 pt-8 text-xl font-medium tablet:pt-16 tablet:text-2xl laptop:text-2xl">
+          <h1 className="pb-4 pt-8 font-popi text-xl font-medium tablet:pt-16 tablet:text-2xl laptop:text-2xl">
             Create your account
           </h1>
-          <div className=" grid w-full gap-y-2 text-left tablet:gap-y-4 desktop:w-[80%] ">
+          <div className=" grid w-full gap-y-2 text-left font-light tablet:gap-y-4 desktop:w-[80%] ">
             <InputForm
               type="text"
               label={"Full name"}
@@ -45,9 +51,10 @@ function CreateAccount() {
           </div>
         </div>
         <div className="pt-8 laptop:absolute laptop:bottom-0 laptop:right-0">
-          <button className=" w-full rounded bg-[#0073ea] p-4	 text-base text-white hover:opacity-30">
-            Continue
-          </button>
+          <BtnContinue
+            btnStyle="flex w-full items-center justify-center rounded bg-[#0073ea]	p-4 text-base text-white hover:opacity-30"
+            handle={handleContinue}
+          />
         </div>
       </div>
       <div className=" hidden  h-full justify-center bg-[#6161ff] tablet:col-span-2 tablet:block">
