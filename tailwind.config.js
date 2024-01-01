@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         popi: "Poppins",
+        figtree: "Figtree",
       },
     },
     screens: {
