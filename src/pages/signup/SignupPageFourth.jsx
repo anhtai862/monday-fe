@@ -2,8 +2,16 @@ import React from "react";
 import { LAST_Q } from "./Data";
 import BtnContinue from "../../components/BtnContinue";
 import BtnBack from "../../components/BtnBack";
+import { useNavigate } from "react-router-dom";
 
 function SignupPageFourth() {
+  const navigation = useNavigate();
+  const handleContinue = () => {
+    navigation(`/InviteYourTeam`);
+  };
+  const handleBack = () => {
+    navigation(`/SignupPageThird`);
+  };
   return (
     <div className=" box-border flex h-screen max-w-full  ">
       <div className="flex max-h-screen flex-col gap-6 px-6 py-8 tablet:basis-3/5  tablet:px-8  tablet:py-16 laptop:px-20 laptop:py-16  desktop:px-32">
@@ -39,9 +47,9 @@ function SignupPageFourth() {
           </div>
         </div>
         <div className=" flex  h-full flex-col items-center justify-end gap-3  tablet:flex-row tablet:items-end tablet:justify-between">
-          <BtnBack />
+          <BtnBack handle={handleBack} />
 
-          <BtnContinue />
+          <BtnContinue handle={handleContinue} />
         </div>
       </div>
 

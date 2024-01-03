@@ -24,7 +24,7 @@ function SignupPageThird() {
   return (
     <div className=" grid h-screen font-popi tablet:grid-cols-5">
       <div className=" relative mx-6 text-center tablet:col-span-3 tablet:mx-8 tablet:my-6  laptop:mx-20 laptop:my-16 laptop:grid laptop:text-left">
-        <div className="laptop:justify-left">
+        <div className="">
           <img
             src="https://cdn.monday.com/images/logos/logo-full-big.png"
             alt="monday"
