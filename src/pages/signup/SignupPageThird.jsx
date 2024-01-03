@@ -18,7 +18,7 @@ function SignupPageThird() {
     }
   };
   const handleContinue = () => {
-    navigation(`/`);
+    navigation(`/SignupPageFourth`);
   };
 
   return (
@@ -36,7 +36,7 @@ function SignupPageThird() {
             <h1 className=" pb-4 text-base font-normal tablet:text-xl laptop:pb-8 laptop:text-2xl">
               Hey there, what brings you here today?
             </h1>
-            <div className="grid grid-cols-2  gap-3 pb-2 laptop:flex laptop:pb-6 ">
+            <div className="grid grid-cols-2 gap-3 pb-2 font-figtree laptop:flex laptop:pb-6 ">
               {WHAT_BRINGS.map((bring) => {
                 return (
                   <label
@@ -51,7 +51,7 @@ function SignupPageThird() {
                       className=" mr-2 h-5 w-4 "
                       onClick={() => handleJob(bring.details)}
                     />
-                    <span className="  text-xs font-light tablet:text-base ">
+                    <span className="  text-xs font-normal tablet:text-base ">
                       {bring.job}
                     </span>
                   </label>
@@ -68,7 +68,7 @@ function SignupPageThird() {
                   </h1>
                 ) : null}
 
-                <div className="flex flex-wrap gap-3 ">
+                <div className="flex flex-wrap gap-3 font-figtree ">
                   {job.map((bestDesc) => {
                     return (
                       <label
@@ -83,7 +83,7 @@ function SignupPageThird() {
                           className=" mr-2 h-5 w-4 "
                           onClick={() => handleNext(false)}
                         />
-                        <span className=" text-xs font-light tablet:text-base">
+                        <span className=" text-xs font-normal tablet:text-base">
                           {bestDesc}
                         </span>
                       </label>
