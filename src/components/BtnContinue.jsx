@@ -2,8 +2,12 @@ import React from "react";
 
 function BtnContinue({ btnStyle, handle, disable }) {
   return (
-    <button className={btnStyle} disabled={disable} onClick={handle}>
-      Continue{" "}
+    <button
+      className="flex w-full items-center  justify-center rounded bg-[#0073ea] px-4 py-2 font-figtree text-sm font-normal text-white hover:opacity-30 disabled:bg-gray-200 disabled:text-gray-400 tablet:w-32 tablet:text-base"
+      disabled={disable}
+      onClick={handle}
+    >
+      <span>Continue</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
