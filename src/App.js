@@ -4,6 +4,7 @@ import CreateAccount from "./pages/signup/CreateAccount";
 import SignupPageThird from "./pages/signup/SignupPageThird";
 import SignupPageFourth from "./pages/signup/SignupPageFourth";
 import InviteYourTeam from "./pages/signup/InviteYourTeam";
+import BoardPage from "./pages/login/BoardPage";
 function App() {
   return (
     <>
@@ -13,6 +14,7 @@ function App() {
         <Route path="/SignupPageThird" element={<SignupPageThird />} />
         <Route path="/SignupPageFourth" element={<SignupPageFourth />} />
         <Route path="/InviteYourTeam" element={<InviteYourTeam />} />
+        <Route path="/BoardPage" element={<BoardPage />} />
       </Routes>
     </>
   );
