@@ -3,7 +3,7 @@ import React from "react";
 function BtnBack({ handle, disable }) {
   return (
     <button
-      className=" flex w-full items-center  justify-center rounded border border-gray-400 px-4 py-2 font-figtree text-sm font-normal  hover:bg-gray-300   tablet:w-24 tablet:text-base"
+      className=" flex w-full items-center justify-center  rounded border border-gray-400 px-4 py-2 font-figtree text-sm font-normal hover:bg-gray-300  tablet:w-24   tablet:text-base tallTablet:w-full"
       disabled={disable}
       onClick={handle}
     >
