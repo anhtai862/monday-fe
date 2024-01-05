@@ -1,9 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function InviteYourTeam() {
+  const navigation = useNavigate();
+  const handleContinue = () => {
+    navigation(`/BoardPage`);
+  };
+
   return (
     <div className="grid h-screen tablet:grid-cols-5 	">
-      <div className="box-border flex w-full flex-col px-6 py-8 font-figtree text-sm font-normal tablet:col-span-3	tablet:text-sm laptop:px-8 laptop:py-10	laptop:text-base desktop:px-24 desktop:py-16 desktop:text-base">
+      <div className="box-border flex w-full flex-col px-6 py-8 font-figtree text-sm font-normal tablet:col-span-3	tablet:text-sm laptop:px-8 laptop:py-10	laptop:text-base desktop:px-12 desktop:py-8 desktop:text-base">
         <img
           src="https://cdn.monday.com/images/logos/logo-full-big.png"
           alt="monday"
@@ -12,7 +18,7 @@ function InviteYourTeam() {
         <h1 className="font-popi text-base font-semibold tablet:text-xl laptop:text-2xl">
           Who else is on your team?
         </h1>
-        <label htmlFor="" className=" py-3  ">
+        <label htmlFor="" className=" py-3 laptop:w-3/4  ">
           <span>Invite with link (anyone with a @ email)</span>
           <div className="flex  justify-start">
             <input
@@ -20,9 +26,9 @@ function InviteYourTeam() {
               name="coppy"
               id=""
               placeholder="https://aa57376.monday.com/users/sign_up?invitationId=34988395821909230000"
-              className=" w-full border border-gray-400 px-3"
+              className=" w-full rounded-l border border-gray-400 px-3"
             />
-            <button className="flex items-center justify-center rounded border border-gray-400 px-4 py-2">
+            <button className="flex items-center justify-center rounded-r border border-l-0 border-gray-400 px-4 py-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -43,16 +49,16 @@ function InviteYourTeam() {
           </div>
         </label>
 
-        <div className="flex flex-col gap-2 pb-3 ">
+        <div className="flex flex-col gap-2 pb-3 laptop:w-3/4 ">
           <div className="flex">
             <input
               type="text"
               name="coppy"
               id=""
               placeholder="Add email here..."
-              className="w-full border border-gray-400 px-3 shadow"
+              className="w-full rounded-l border  border-gray-400 px-3 shadow"
             />
-            <button className="flex items-center justify-center rounded border border-gray-400 px-4 py-2 shadow">
+            <button className="flex  items-center justify-center rounded-r border  border-l-0 border-gray-400 px-4 py-2 shadow">
               <span>Member</span>
 
               <svg
@@ -77,9 +83,9 @@ function InviteYourTeam() {
               name="coppy"
               id=""
               placeholder="Add email here..."
-              className="w-full border border-gray-400 px-3 shadow"
+              className="w-full rounded-l border border-gray-400 px-3 shadow"
             />
-            <button className="flex items-center justify-center rounded border border-gray-400 px-4 py-2 shadow">
+            <button className="flex items-center justify-center rounded-r border border-l-0 border-gray-400 px-4 py-2 shadow">
               <span>Member</span>
 
               <svg
@@ -121,8 +127,8 @@ function InviteYourTeam() {
             Remind me late
           </button>
           <button
-            disabled
-            className="rounded px-4 py-2 font-figtree text-sm font-normal disabled:bg-slate-200  disabled:text-gray-400 tablet:text-sm laptop:text-base desktop:text-base"
+            onClick={handleContinue}
+            className="rounded bg-[#0073ea] px-4 py-2 font-figtree text-sm font-normal text-white disabled:bg-slate-200 disabled:text-gray-400 tablet:text-sm laptop:text-base desktop:text-base"
           >
             Invite your team
           </button>
