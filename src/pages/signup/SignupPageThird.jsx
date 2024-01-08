@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 import BtnContinue from "../../components/BtnContinue";
 import { WHAT_BRINGS } from "./Data";
+import { useNavigate } from "react-router-dom";
 
 function SignupPageThird() {
   const [job, setJob] = useState();
