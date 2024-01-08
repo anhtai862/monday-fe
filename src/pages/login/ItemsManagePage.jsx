@@ -1,68 +1,70 @@
 import React from "react";
-import { RELEVANT_COLUMNS } from "./DataBoard";
 import { useNavigate } from "react-router-dom";
-function ColumnTable() {
+import { ITEMS_MANAGE } from "./DataBoard";
+
+function ItemsManagePage() {
   const navigation = useNavigate();
   const handleContinue = () => {
-    navigation(`/ItemsManagePage`);
+    navigation("/BoardPage");
   };
   const handleBack = () => {
-    navigation(`/BoardPage`);
+    navigation(`/columnTable`);
   };
-
   return (
     <div className="grid h-screen grid-flow-row auto-rows-auto px-6 py-8 laptop:p-0 desktop:grid desktop:grid-cols-6">
-      <div className="   box-border h-full font-figtree text-sm font-normal tablet:text-sm   laptop:px-8 laptop:py-10 laptop:text-sm 	desktop:col-span-3  desktop:flex  desktop:text-base">
+      <div className="  box-border h-full font-figtree text-sm font-normal tablet:text-sm   laptop:px-8 laptop:py-10 laptop:text-sm 	desktop:col-span-3  desktop:flex  desktop:text-base">
         <div className="desktop:m-auto  desktop:max-w-[440px] ">
           <img
             src="https://cdn.monday.com/images/logos/logo-full-big.png"
             alt="monday"
             className="  mx-auto  mb-8 h-6 laptop:mb-16 laptop:ml-0 laptop:inline-block laptop:h-8 desktop:h-6 "
           />
-          <div className="">
-            <h1 className="font-popi text-base font-medium laptop:text-xl desktop:pb-6 desktop:text-2xl">
-              Let's start working together
-            </h1>
-            <p className="pt-2 text-xs font-light ">
-              Choose from the most popular column types for your work
-            </p>
-          </div>
-
-          <div className="flex flex-wrap justify-start gap-2 py-6">
-            {RELEVANT_COLUMNS.map((relevant) => {
-              return (
-                <div
-                  key={relevant.id}
-                  className="flex items-center justify-center rounded border border-gray-300   active:border-[#0073ea] "
-                >
-                  <button className="  inline-flex  items-center justify-center p-2 ">
-                    <div className={relevant.style}>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth={1.5}
-                        stroke="currentColor"
-                        className="h-4 w-4 stroke-white"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d={relevant.d}
-                        />
-                      </svg>
-                    </div>
-                    <span className="pl-1 text-xs">{relevant.name}</span>
-                  </button>
-                </div>
-              );
-            })}
-          </div>
-
+          <h1 className="font-popi text-base font-semibold laptop:text-xl desktop:pb-6 desktop:text-2xl">
+            Select one of the items you’d like to manage
+          </h1>
+          <label
+            htmlFor=""
+            className="flex flex-col  gap-1 py-3 desktop:pb-12 desktop:text-sm"
+          >
+            <div className="grid grid-cols-3 gap-y-2  ">
+              {ITEMS_MANAGE.map((item_manage) => {
+                return (
+                  <label
+                    htmlFor={item_manage}
+                    className=" col-span-1 flex  cursor-pointer items-center justify-start  rounded-full px-4  py-2  "
+                    key={item_manage}
+                  >
+                    <input
+                      type="radio"
+                      name="manage"
+                      id={item_manage}
+                      className=" mr-2 h-5 w-3 tablet:w-4 "
+                    />
+                    <span className="  font-figtree text-xs font-normal tablet:text-sm ">
+                      {item_manage}
+                    </span>
+                  </label>
+                );
+              })}
+              <label
+                htmlFor="manage"
+                className="col-span-1 flex cursor-pointer items-center justify-start px-4 py-2   "
+              >
+                <input type="radio" name="manage" className=" mr-2 h-5 w-4 " />
+                <input
+                  type="text"
+                  placeholder="Custom"
+                  name="manage"
+                  id="custom"
+                  className="box-border w-full rounded border-2 border-gray-200 px-4 py-2 font-figtree text-xs outline-1 outline-blue-300 tablet:w-3/4 tablet:text-sm"
+                />
+              </label>
+            </div>
+          </label>
           <div className="w-full rounded bg-gray-200 px-2 py-3 desktop:p-6  ">
             <span className="   text-left text-xs font-light laptop:text-[15px] ">
-              Assign accountability to any team member or guest so everyone is
-              aligned on what they need to complete.
+              "Items" are rows in your board which hold all the relevant
+              information to your tasks, projects, campaigns and more.
             </span>
           </div>
 
@@ -148,12 +150,12 @@ function ColumnTable() {
                   <div className="h-1 w-3/4 rounded bg-gray-300"> </div>
                 </div>
 
-                <div className="col-[2_/_auto] flex h-9 w-full items-center justify-center  border-y  ">
-                  <div className=" m-auto flex h-1 w-full items-center justify-center">
-                    <span>Due date </span>
+                <div className="col-[2_/_auto] flex h-9 w-full items-center justify-center border-y text-center font-figtree text-sm tablet:text-base  ">
+                  <div className=" m-auto flex h-1 w-full items-center justify-center ">
+                    <span className="">Due date </span>
                   </div>
                 </div>
-                <div className="  col-[3/_auto] flex h-9 w-full  items-center justify-center border ">
+                <div className="  col-[3/_auto] flex h-9 w-full  items-center justify-center border text-center font-figtree text-sm tablet:text-base ">
                   <div className=" m-auto flex h-1 w-full items-center justify-center ">
                     <span>Status</span>
                   </div>
@@ -340,4 +342,4 @@ function ColumnTable() {
   );
 }
 
-export default ColumnTable;
+export default ItemsManagePage;
