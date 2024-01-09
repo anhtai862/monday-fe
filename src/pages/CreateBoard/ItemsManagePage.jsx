@@ -5,7 +5,7 @@ import LayoutRight from "../../components/LayoutRight";
 
 function ItemsManagePage({ setIndex, numberOfPage }) {
   const handleContinue = () => {
-    setIndex(0);
+    setIndex(8);
   };
   const handleBack = () => {
     setIndex(6);

@@ -68,7 +68,7 @@ function Signup({ setIndex, numberOfPage }) {
         </div>
       </div>
       <LayoutRight
-        background={"#6161ff"}
+        background={"bg-[#6161ff]"}
         urlll={
           "bg-[url(https://dapulse-res.cloudinary.com/image/upload/monday_platform/signup/signup-right-side-assets-new-flow/welcome-to-monday.png)]"
         }

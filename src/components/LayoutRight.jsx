@@ -4,7 +4,7 @@ import RightHandColumnTable from "./RightHandColumnTable";
 
 function LayoutRight({ background, urlll, orderOfPage }) {
   const style = {
-    color: `bg-[${background}] hidden h-full justify-center tablet:col-span-2 tablet:block `,
+    color: `${background} hidden h-full justify-center tablet:col-span-2 tablet:block `,
     img: `h-full ${urlll}  bg-contain bg-center bg-no-repeat`,
   };
 
