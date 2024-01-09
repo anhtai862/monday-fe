@@ -135,7 +135,7 @@ function InviteYourTeam({ setIndex, numberOfPage }) {
       </div>
 
       <LayoutRight
-        background={"#00ca72"}
+        background={"bg-[#00ca72]"}
         urlll={
           "bg-[url(https://dapulse-res.cloudinary.com/image/upload/monday_platform/signup/new-signup-right-side-assets/Invite-your-teammates.png)]"
         }

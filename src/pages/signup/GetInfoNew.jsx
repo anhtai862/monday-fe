@@ -4,9 +4,10 @@ import CreateAccount from "./CreateAccount";
 import SignupPageThird from "./SignupPageThird";
 import SignupPageFourth from "./SignupPageFourth";
 import InviteYourTeam from "./InviteYourTeam";
-import BoardPage from "../login/BoardPage";
-import ColumnTable from "../login/ColumnTable";
-import ItemsManagePage from "../login/ItemsManagePage";
+import BoardPage from "../CreateBoard/BoardPage";
+import ColumnTable from "../CreateBoard/ColumnTable";
+import ItemsManagePage from "../CreateBoard/ItemsManagePage";
+import ViewBoard from "../CreateBoard/ViewBoard";
 
 function GetInfoNew() {
   const [index, setIndex] = useState(0);
@@ -28,6 +29,8 @@ function GetInfoNew() {
         return <ColumnTable setIndex={setIndex} numberOfPage={index} />;
       case 7:
         return <ItemsManagePage setIndex={setIndex} numberOfPage={index} />;
+      case 8:
+        return <ViewBoard setIndex={setIndex} numberOfPage={index} />;
 
       default:
         break;

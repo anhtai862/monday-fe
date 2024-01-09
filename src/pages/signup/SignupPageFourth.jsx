@@ -53,7 +53,7 @@ function SignupPageFourth({ setIndex, numberOfPage }) {
       </div>
 
       <LayoutRight
-        background={"#ffcc00"}
+        background={"bg-[#ffcc00]"}
         urlll={
           "bg-[url(https://dapulse-res.cloudinary.com/image/upload/monday_platform/signup/signup-right-side-assets-new-flow/how-did-you-hear-about-us-with-invite.png)]"
         }
