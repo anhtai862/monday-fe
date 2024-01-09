@@ -1,16 +1,16 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+
 import BtnContinue from "../../components/BtnContinue";
 import InputForm from "../../components/InputForm";
+import LayoutRight from "../../components/LayoutRight";
 
-function CreateAccount() {
-  const navigation = useNavigate();
+function CreateAccount({ setIndex, numberOfPage }) {
   const handleContinue = () => {
-    navigation(`/SignupPageThird`);
+    setIndex(2);
   };
   return (
     <div className=" grid h-screen tablet:grid-cols-5 ">
-      <div className=" destop:mx-32 font-figtree  grid items-center justify-center  bg-white text-center tablet:col-span-3 tablet:mx-5 tablet:my-16 tablet:block tablet:justify-start laptop:relative laptop:mx-20 laptop:text-left">
+      <div className=" destop:mx-32 grid  items-center justify-center bg-white  text-center font-figtree tablet:col-span-3 tablet:mx-5 tablet:my-16 tablet:block tablet:justify-start laptop:relative laptop:mx-20 laptop:text-left">
         <div className="laptop:text-left ">
           <img
             src="https://cdn.monday.com/images/logos/logo-full-big.png"
@@ -57,9 +57,14 @@ function CreateAccount() {
           />
         </div>
       </div>
-      <div className=" hidden  h-full justify-center bg-[#6161ff] tablet:col-span-2 tablet:block">
-        <div className="h-full bg-[url(https://dapulse-res.cloudinary.com/image/upload/monday_platform/signup/signup-right-side-assets-new-flow/set-up-your-account.png)] bg-contain bg-center bg-no-repeat"></div>
-      </div>
+
+      <LayoutRight
+        background={"#6161ff"}
+        urlll={
+          "bg-[url(https://dapulse-res.cloudinary.com/image/upload/monday_platform/signup/signup-right-side-assets-new-flow/set-up-your-account.png)]"
+        }
+        orderOfPage={numberOfPage}
+      />
     </div>
   );
 }

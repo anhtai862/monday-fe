@@ -1,14 +1,13 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import LayoutRight from "../../components/LayoutRight";
 
-function BoardPage() {
-  const navigation = useNavigate();
+function BoardPage({ setIndex, numberOfPage }) {
   const handleContinue = () => {
-    navigation(`/ColumnTable`);
+    setIndex(6);
   };
   return (
-    <div className="grid h-screen grid-rows-6 px-6 py-8 laptop:p-0 desktop:grid desktop:grid-cols-6">
-      <div className="  row-span-3 box-border h-screen font-figtree text-sm  font-normal tablet:row-span-3  tablet:text-sm laptop:px-8 laptop:py-10 laptop:text-sm tallLaptopMin:row-span-2	desktop:col-span-3  desktop:flex  desktop:text-base">
+    <div className="grid h-screen grid-flow-row auto-rows-auto px-6 py-8 laptop:p-0 desktop:grid desktop:grid-cols-6">
+      <div className="  box-border h-full font-figtree text-sm font-normal tablet:text-sm   laptop:px-8 laptop:py-10 laptop:text-sm 	desktop:col-span-3  desktop:flex  desktop:text-base">
         <div className="desktop:m-auto  desktop:max-w-[440px] ">
           <img
             src="https://cdn.monday.com/images/logos/logo-full-big.png"
@@ -67,177 +66,7 @@ function BoardPage() {
           </div>
         </div>
       </div>
-      <div className=" row-span-3 mt-20 box-border  tablet:mt-0 tallTablet:hidden tallLaptopMin:h-full  desktop:col-span-3 desktop:h-screen  desktop:p-[2px]">
-        <div className="relative flex h-full items-center rounded-xl bg-[#f6f7fb] tablet:justify-center laptop:justify-center desktop:justify-end  ">
-          <button className=" absolute right-2 top-2 z-10 flex h-10 w-10 items-center justify-center rounded  hover:bg-[#dcdfec] ">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="h-6 w-6 "
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M6 18 18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
-
-          <div className="flex flex-col   bg-white  py-2 shadow drop-shadow-[-10px_10px_30px_rgba(29,140,242,.3)] desktop:max-w-[860px]">
-            <h1 className=" text-center font-popi text-base font-semibold laptop:text-xl desktop:hidden desktop:pt-8">
-              Your Name Board
-            </h1>
-            <div className="my-4 ml-10 mt-8 hidden h-2 w-1/3 rounded bg-[#c3c6d4]  desktop:block">
-              {" "}
-            </div>
-
-            <div className="flex flex-col desktop:py-16 desktop:pl-8">
-              <div className=" grid grid-cols-[170px_minmax(auto,_200px)_minmax(auto,_200px)_minmax(auto,_200px)_auto] items-center   border-gray-200  ">
-                {/* table 5/5 top */}
-                <div className="  col-[1/_auto] flex h-9 w-full items-center justify-start  pr-6 ">
-                  <div className="h-[6px] w-3/4 rounded bg-[#579bfc]"> </div>
-                </div>
-                {/* 1 */}
-                <div className=" col-[1/_auto] flex h-9 w-full items-center justify-start rounded-tl-[10px] border border-l-[6px] border-l-[#579bfc] px-6  ">
-                  <div className="h-1 w-3/4 rounded bg-gray-300"> </div>
-                </div>
-
-                <div className="col-[2_/_auto] flex h-9 w-full  items-center justify-center border-y ">
-                  <div className=" h-1 w-1/3 rounded bg-gray-300"> </div>
-                </div>
-                <div className="  col-[3/_auto] flex h-9 w-full  items-center justify-center border ">
-                  <div className=" h-1 w-1/3 rounded bg-gray-300"> </div>
-                </div>
-                <div className="col-[4/_auto] flex h-9 w-full  items-center justify-center border-y ">
-                  <div className=" h-1 w-1/3 rounded bg-gray-300"> </div>
-                </div>
-
-                <div className="  col-[5/_auto] flex h-9 w-full items-center justify-center border ">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className=" mx-3 h-4 w-4"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M12 4.5v15m7.5-7.5h-15"
-                    />
-                  </svg>
-                </div>
-                {/* 2 */}
-                <div className="  col-[1/_auto] flex h-9 w-full items-center justify-start border border-l-[6px] border-l-[#579bfc] px-6 ">
-                  <div className="h-1 w-3/4 rounded bg-gray-300"> </div>
-                </div>
-
-                <div className="col-[2_/_auto] flex h-9 w-full  items-center justify-center border-y ">
-                  <div className=" h-1 w-1/3 rounded bg-gray-300"> </div>
-                </div>
-                <div className="  col-[3/_auto] flex h-9 w-full  items-center justify-center border ">
-                  <div className=" h-1 w-1/3 rounded bg-gray-300"> </div>
-                </div>
-                <div className="col-[4/_auto] flex h-9 w-full  items-center justify-center border-y ">
-                  <div className=" h-1 w-1/3 rounded bg-gray-300"> </div>
-                </div>
-
-                <div className="  col-[5/_auto] flex h-9 w-full items-center justify-center border "></div>
-                {/* 3 */}
-                <div className="  col-[1/_auto] flex h-9 w-full items-center justify-start border border-l-[6px] border-l-[#579bfc] px-6 ">
-                  <div className="h-1 w-3/4 rounded bg-gray-300"> </div>
-                </div>
-
-                <div className="col-[2_/_auto] flex h-9 w-full  items-center justify-center border-y ">
-                  <div className=" h-1 w-1/3 rounded bg-gray-300"> </div>
-                </div>
-                <div className="  col-[3/_auto] flex h-9 w-full  items-center justify-center border ">
-                  <div className=" h-1 w-1/3 rounded bg-gray-300"> </div>
-                </div>
-                <div className="col-[4/_auto] flex h-9 w-full  items-center justify-center border-y ">
-                  <div className=" h-1 w-1/3 rounded bg-gray-300"> </div>
-                </div>
-
-                <div className="  col-[5/_auto] flex h-9 w-full items-center justify-center border "></div>
-                {/* 4 */}
-                <div className="  col-[1/_auto] flex h-9 w-full items-center justify-start border border-l-[6px] border-l-[#579bfc] px-6 ">
-                  <div className="h-1 w-3/4 rounded bg-gray-300"> </div>
-                </div>
-
-                <div className="col-[2_/_auto] flex h-9 w-full  items-center justify-center border-y ">
-                  <div className=" h-1 w-1/3 rounded bg-gray-300"> </div>
-                </div>
-                <div className="  col-[3/_auto] flex h-9 w-full  items-center justify-center border ">
-                  <div className=" h-1 w-1/3 rounded bg-gray-300"> </div>
-                </div>
-                <div className="col-[4/_auto] flex h-9 w-full  items-center justify-center border-y ">
-                  <div className=" h-1 w-1/3 rounded bg-gray-300"> </div>
-                </div>
-
-                <div className="  col-[5/_auto] flex h-9 w-full items-center justify-center border "></div>
-                {/* 5 */}
-                <div className="  col-[1/_auto] flex h-9 w-full items-center justify-start rounded-bl-[10px] border border-l-[6px] border-l-[#579bfc] px-6 opacity-[0.5] ">
-                  <div className="h-1 w-3/4 rounded bg-gray-300"> </div>
-                </div>
-
-                <div className="col-[2/_auto] flex h-9 w-full  items-center justify-center border-y "></div>
-                <div className="  col-[3/_auto] flex h-9 w-full  items-center justify-center border-y "></div>
-                <div className="col-[4/_auto] flex h-9 w-full  items-center justify-center border-y "></div>
-
-                <div className="  col-[5/_auto] flex h-9 w-full items-center justify-center border-y "></div>
-
-                {/* table bottom */}
-                <div className="  col-[1/_auto] flex h-9 w-full items-center justify-start  pr-6 ">
-                  <div className="h-[6px] w-3/4 rounded bg-[#00c875]"> </div>
-                </div>
-                <div className="  col-[1/_auto] flex h-9 w-full items-center justify-start rounded-tl-[10px]  border border-l-[6px] border-l-[#00c875] px-6 ">
-                  <div className="h-1 w-3/4 rounded bg-gray-300"> </div>
-                </div>
-
-                <div className="col-[2_/_auto] flex h-9 w-full  items-center justify-center border-y ">
-                  <div className=" h-1 w-1/3 rounded bg-gray-300"> </div>
-                </div>
-                <div className="  col-[3/_auto] flex h-9 w-full  items-center justify-center border ">
-                  <div className=" h-1 w-1/3 rounded bg-gray-300"> </div>
-                </div>
-                <div className="col-[4/_auto] flex h-9 w-full  items-center justify-center border-y ">
-                  <div className=" h-1 w-1/3 rounded bg-gray-300"> </div>
-                </div>
-
-                <div className="  col-[5/_auto] flex h-9 w-full items-center justify-center border ">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className=" h-4 w-4"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M12 4.5v15m7.5-7.5h-15"
-                    />
-                  </svg>
-                </div>
-                <div className="  col-span-1 flex h-9 w-full items-center justify-start rounded-bl-[10px]  border-y border-l-[6px] border-l-[#00c875] px-6 opacity-[0.5] ">
-                  <div className="h-1 w-3/4 rounded bg-gray-300"> </div>
-                </div>
-
-                <div className="col-[2/_auto] flex h-9 w-full  items-center justify-center border-y "></div>
-                <div className="  col-[3/_auto] flex h-9 w-full  items-center justify-center border-y "></div>
-                <div className="col-[4/_auto] flex h-9 w-full  items-center justify-center border-y "></div>
-
-                <div className="  col-[5/_auto] flex h-9 w-full items-center justify-center border-y "></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <LayoutRight orderOfPage={numberOfPage} />
     </div>
   );
 }

@@ -2,12 +2,12 @@ import React, { useState } from "react";
 
 import BtnContinue from "../../components/BtnContinue";
 import { WHAT_BRINGS } from "./Data";
-import { useNavigate } from "react-router-dom";
+import LayoutRight from "../../components/LayoutRight";
 
-function SignupPageThird() {
+function SignupPageThird({ setIndex, numberOfPage }) {
   const [job, setJob] = useState();
   const [unNext, setunNext] = useState(true);
-  const navigation = useNavigate();
+
   const handleNext = (stt) => {
     setunNext(stt);
   };
@@ -19,7 +19,7 @@ function SignupPageThird() {
     }
   };
   const handleContinue = () => {
-    navigation(`/SignupPageFourth`);
+    setIndex(3);
   };
 
   return (
@@ -103,9 +103,14 @@ function SignupPageThird() {
           </div>
         </div>
       </div>
-      <div className=" hidden  h-full justify-center bg-[#6161ff] tablet:col-span-2 tablet:block">
-        <div className="h-full bg-[url(https://dapulse-res.cloudinary.com/image/upload/monday_platform/signup/signup-right-side-assets-new-flow/what-brings-you-here-today.png)] bg-contain bg-center bg-no-repeat"></div>
-      </div>
+
+      <LayoutRight
+        background={"#6161ff"}
+        urlll={
+          "bg-[url(https://dapulse-res.cloudinary.com/image/upload/monday_platform/signup/signup-right-side-assets-new-flow/what-brings-you-here-today.png)]"
+        }
+        orderOfPage={numberOfPage}
+      />
     </div>
   );
 }

@@ -1,15 +1,15 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import LayoutRight from "../../components/LayoutRight";
 
-function Signup() {
-  const navigation = useNavigate();
+function Signup({ setIndex, numberOfPage }) {
   const handleContinue = () => {
-    navigation(`/CreateAccount`);
+    setIndex(1);
   };
+  console.log(numberOfPage);
 
   return (
     <div className=" grid h-screen  tablet:grid-cols-5 ">
-      <div className=" font-figtree grid items-center justify-center  bg-white px-4 text-center tablet:col-span-3">
+      <div className=" grid items-center justify-center bg-white  px-4 text-center font-figtree tablet:col-span-3">
         <div className="   tablet:w-[418px] tablet:px-1  ">
           <h1 className="pb-2  font-popi text-xl font-medium tablet:pb-4 tablet:text-2xl laptop:text-3xl">
             Welcome to monday.com
@@ -67,11 +67,16 @@ function Signup() {
           </p>
         </div>
       </div>
-      <div className=" hidden  h-full justify-center bg-[#6161ff] tablet:col-span-2 tablet:block">
-        <div className="h-full bg-[url(https://dapulse-res.cloudinary.com/image/upload/monday_platform/signup/signup-right-side-assets-new-flow/welcome-to-monday.png)] bg-contain bg-center bg-no-repeat"></div>
-      </div>
+      <LayoutRight
+        background={"#6161ff"}
+        urlll={
+          "bg-[url(https://dapulse-res.cloudinary.com/image/upload/monday_platform/signup/signup-right-side-assets-new-flow/welcome-to-monday.png)]"
+        }
+        orderOfPage={numberOfPage}
+      />
     </div>
   );
+  // ("")
 }
 
 export default Signup;

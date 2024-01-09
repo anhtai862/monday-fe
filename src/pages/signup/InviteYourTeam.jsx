@@ -1,10 +1,9 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import LayoutRight from "../../components/LayoutRight";
 
-function InviteYourTeam() {
-  const navigation = useNavigate();
+function InviteYourTeam({ setIndex, numberOfPage }) {
   const handleContinue = () => {
-    navigation(`/BoardPage`);
+    setIndex(5);
   };
 
   return (
@@ -135,9 +134,13 @@ function InviteYourTeam() {
         </div>
       </div>
 
-      <div className=" hidden  h-full justify-center bg-[#00ca72] tablet:col-span-2 tablet:block">
-        <div className="h-full bg-[url(https://dapulse-res.cloudinary.com/image/upload/monday_platform/signup/new-signup-right-side-assets/Invite-your-teammates.png)] bg-contain bg-center bg-no-repeat"></div>
-      </div>
+      <LayoutRight
+        background={"#00ca72"}
+        urlll={
+          "bg-[url(https://dapulse-res.cloudinary.com/image/upload/monday_platform/signup/new-signup-right-side-assets/Invite-your-teammates.png)]"
+        }
+        orderOfPage={numberOfPage}
+      />
     </div>
   );
 }
