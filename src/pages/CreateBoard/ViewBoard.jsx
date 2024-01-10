@@ -4,7 +4,7 @@ import { VIEW_OUTLINE } from "./DataBoard";
 
 function ViewBoard({ setIndex, numberOfPage }) {
   const handleContinue = () => {
-    setIndex(0);
+    setIndex(9);
   };
   const handleBack = () => {
     setIndex(7);
