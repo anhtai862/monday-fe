@@ -5,7 +5,6 @@ function Signup({ setIndex, numberOfPage }) {
   const handleContinue = () => {
     setIndex(1);
   };
-  console.log(numberOfPage);
 
   return (
     <div className=" grid h-screen  tablet:grid-cols-5 ">

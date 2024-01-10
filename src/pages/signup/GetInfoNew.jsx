@@ -8,6 +8,7 @@ import BoardPage from "../CreateBoard/BoardPage";
 import ColumnTable from "../CreateBoard/ColumnTable";
 import ItemsManagePage from "../CreateBoard/ItemsManagePage";
 import ViewBoard from "../CreateBoard/ViewBoard";
+import ListYourTask from "../CreateBoard/ListYourTask";
 
 function GetInfoNew() {
   const [index, setIndex] = useState(0);
@@ -31,12 +32,13 @@ function GetInfoNew() {
         return <ItemsManagePage setIndex={setIndex} numberOfPage={index} />;
       case 8:
         return <ViewBoard setIndex={setIndex} numberOfPage={index} />;
+      case 9:
+        return <ListYourTask setIndex={setIndex} numberOfPage={index} />;
 
       default:
         break;
     }
   }
-  console.log("index, ", index);
 
   return <div>{renderLayout()}</div>;
 }
