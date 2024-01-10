@@ -9,6 +9,7 @@ import ColumnTable from "../CreateBoard/ColumnTable";
 import ItemsManagePage from "../CreateBoard/ItemsManagePage";
 import ViewBoard from "../CreateBoard/ViewBoard";
 import ListYourTask from "../CreateBoard/ListYourTask";
+import GroupTask from "../CreateBoard/GroupTask";
 
 function GetInfoNew() {
   const [index, setIndex] = useState(0);
@@ -34,6 +35,8 @@ function GetInfoNew() {
         return <ViewBoard setIndex={setIndex} numberOfPage={index} />;
       case 9:
         return <ListYourTask setIndex={setIndex} numberOfPage={index} />;
+      case 10:
+        return <GroupTask setIndex={setIndex} numberOfPage={index} />;
 
       default:
         break;
