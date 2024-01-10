@@ -1,6 +1,13 @@
 import React from "react";
 import LayoutRight from "../../components/LayoutRight";
+import { Form, Input } from "antd";
 
+const onFinish = (values) => {
+  console.log("Success:", values);
+};
+const onFinishFailed = (errorInfo) => {
+  console.log("Failed:", errorInfo);
+};
 function ListYourTask({ setIndex, numberOfPage }) {
   const handleContinue = () => {
     setIndex(0);
@@ -25,24 +32,60 @@ function ListYourTask({ setIndex, numberOfPage }) {
             htmlFor="nametask"
             className=" flex  cursor-pointer flex-col items-center justify-center gap-1   py-2  "
           >
-            <input
-              type="text"
-              placeholder="Your Tasks "
-              name="nametask"
-              className="box-border w-full rounded border-2 border-gray-200 px-4 py-2 font-figtree text-xs outline-1 outline-blue-300  tablet:text-sm"
-            />
-            <input
-              type="text"
-              placeholder="Your Tasks "
-              name="nametask"
-              className="box-border w-full rounded border-2 border-gray-200 px-4 py-2 font-figtree text-xs outline-1 outline-blue-300  tablet:text-sm"
-            />
-            <input
-              type="text"
-              placeholder="Your Tasks "
-              name="nametask"
-              className="box-border w-full rounded border-2 border-gray-200 px-4 py-2 font-figtree text-xs outline-1 outline-blue-300  tablet:text-sm"
-            />
+            <div className="relative h-10 w-full">
+              <div className="text-blue-gray-500 absolute right-3 top-2/4 grid h-5 w-5 -translate-y-2/4 place-items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="16"
+                  width="12"
+                  viewBox="0 0 384 512 "
+                >
+                  <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                </svg>
+              </div>
+              <input
+                type="text"
+                placeholder="Your Tasks "
+                name="nametask"
+                className="box-border w-full rounded border-2 border-gray-200 px-4 py-2 font-figtree text-xs outline-1 outline-blue-300  tablet:text-sm"
+              />
+            </div>
+            <div className="relative h-10 w-full">
+              <div className="text-blue-gray-500 absolute right-3 top-2/4 grid h-5 w-5 -translate-y-2/4 place-items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="16"
+                  width="12"
+                  viewBox="0 0 384 512 "
+                >
+                  <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                </svg>
+              </div>
+              <input
+                type="text"
+                placeholder="Your Tasks "
+                name="nametask"
+                className="box-border w-full rounded border-2 border-gray-200 px-4 py-2 font-figtree text-xs outline-1 outline-blue-300  tablet:text-sm"
+              />
+            </div>
+            <div className="relative h-10 w-full">
+              <div className="text-blue-gray-500 absolute right-3 top-2/4 grid h-5 w-5 -translate-y-2/4 place-items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="16"
+                  width="12"
+                  viewBox="0 0 384 512 "
+                >
+                  <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                </svg>
+              </div>
+              <input
+                type="text"
+                placeholder="Your Tasks "
+                name="nametask"
+                className="box-border w-full rounded border-2 border-gray-200 px-4 py-2 font-figtree text-xs outline-1 outline-blue-300  tablet:text-sm"
+              />
+            </div>
           </label>
 
           <div className="flex h-full flex-col items-start justify-center gap-2 py-4 tablet:flex-row tablet:justify-around tallTablet:flex-col laptop:items-start desktop:items-center desktop:justify-between desktop:pt-20 ">
