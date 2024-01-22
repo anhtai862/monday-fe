@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
@@ -6,6 +7,13 @@ module.exports = {
       fontFamily: {
         popi: "Poppins",
         figtree: "Figtree",
+      },
+      colors: {
+        whiteDarkmode: "#d5d8df",
+        hoverDarkmode: "#4b4e69",
+      },
+      boxShadow: {
+        card: "0px 6px 20px rgba(9, 11, 25, 0.5);",
       },
     },
     screens: {
