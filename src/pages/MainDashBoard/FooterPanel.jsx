@@ -1,13 +1,18 @@
 import React from "react";
 
-function FooterPanel() {
+function FooterPanel({ setIndex }) {
   return (
     <div className="w-full bg-[#1c1f3b] px-2 pb-2 ">
       {" "}
       <div className="flex flex-row items-center justify-between rounded-2xl bg-[#292f4c] px-6 py-3 shadow-card tablet:py-5 ">
         {/* home */}
 
-        <div className="flex  cursor-pointer  flex-col items-center justify-start gap-1 overflow-hidden rounded  ">
+        <button
+          onClick={() => {
+            setIndex("home");
+          }}
+          className="flex  cursor-pointer  flex-col items-center justify-start gap-1 overflow-hidden rounded  "
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -24,9 +29,14 @@ function FooterPanel() {
           </svg>
 
           <span className="text-xs tablet:text-base ">Home</span>
-        </div>
+        </button>
         {/* my work */}
-        <div className="flex  cursor-pointer  flex-col items-center justify-start gap-1 overflow-hidden rounded  ">
+        <button
+          onClick={() => {
+            setIndex("mywork");
+          }}
+          className="flex  cursor-pointer  flex-col items-center justify-start gap-1 overflow-hidden rounded  "
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -43,7 +53,7 @@ function FooterPanel() {
           </svg>
 
           <span className="text-xs tablet:text-base ">My Work</span>
-        </div>
+        </button>
 
         {/* noti */}
         <div className="flex  cursor-pointer  flex-col items-center justify-start gap-1 overflow-hidden rounded  ">

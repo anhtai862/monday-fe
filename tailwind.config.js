@@ -14,6 +14,7 @@ module.exports = {
       },
       boxShadow: {
         card: "0px 6px 20px rgba(9, 11, 25, 0.5);",
+        table: "1px 8px 0 -1px #fff",
       },
     },
     screens: {

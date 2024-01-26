@@ -11,19 +11,29 @@ import search from "../../assets/images/iconHeader/search.png";
 import filter from "../../assets/images/iconHeader/filter.png";
 import mytask from "../../assets/images/iconHeader/mytask.png";
 
-function SubNav() {
+function SubNav({ setIndex }) {
   return (
-    <div className="hidden  max-w-[255px] rounded-tr-lg bg-[#181b34] desktop:block">
+    <div className="hidden h-full max-w-[255px] rounded-tr-lg bg-[#181b34] desktop:block">
       {/* first part */}
       <div className="w-full border-b-[1px] border-hoverDarkmode py-3 pl-3 pr-10">
-        <div className="flex  cursor-pointer items-center justify-start gap-2 rounded px-[6px] py-2 hover:bg-hoverDarkmode  ">
+        <button
+          onClick={() => {
+            setIndex("home");
+          }}
+          className="flex  cursor-pointer items-center justify-start gap-2 rounded px-[6px] py-2 hover:bg-hoverDarkmode  "
+        >
           <img src={home} alt="" className="h-5 w-5 " />
           <span className="text-sm ">Home</span>
-        </div>
-        <div className="flex cursor-pointer items-center justify-start gap-2  rounded px-[6px] py-2 hover:bg-hoverDarkmode ">
+        </button>
+        <button
+          onClick={() => {
+            setIndex("mywork");
+          }}
+          className="flex cursor-pointer items-center justify-start gap-2  rounded px-[6px] py-2 hover:bg-hoverDarkmode "
+        >
           <img src={mywork} alt="" className="h-5 w-5 " />
           <span className="text-sm ">My work</span>
-        </div>
+        </button>
       </div>
       {/* second part */}
       <div className=" flex w-full flex-col gap-3 py-3 pl-2 pr-4">

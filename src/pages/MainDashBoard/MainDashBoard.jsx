@@ -1,18 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import HeaderPage from "./HeaderPage";
 import SubNav from "./SubNav";
-import BodyDashBoard from "./BodyDashBoard/BodyDashBoard";
+
 import close from "../../assets/images/iconHeader/close.png";
 
 import FooterPanel from "./FooterPanel";
+import HomeDashBoard from "./BodyDashBoard/HomeDashBoard/HomeDashBoard";
+import MyworkDashBoard from "./BodyDashBoard/MyworkDashBoard";
 
 const MainDashBoard = () => {
+  const [index, setIndex] = useState("home");
+  const renderBody = () => {
+    switch (index) {
+      case "home":
+        return <HomeDashBoard />;
+      case "mywork":
+        return <MyworkDashBoard />;
+
+      default:
+        break;
+    }
+  };
   return (
     <div className=" relative h-screen  bg-[#292f4c] font-figtree text-whiteDarkmode">
-      <HeaderPage />
-      <div className=" mt-[49px] gap-3 tablet:mt-[72px] desktop:mt-12 desktop:flex">
-        <SubNav />
-        <BodyDashBoard />
+      <HeaderPage headerOfPage={index} />
+      <div className=" mt-[49px] h-full gap-3 tablet:mt-[72px] desktop:mt-12 desktop:flex">
+        <SubNav setIndex={setIndex} />
+        {renderBody()}
       </div>
       <div className=" z-20 hidden desktop:fixed desktop:bottom-6 desktop:right-20 desktop:block">
         <div className="relative">
@@ -33,7 +47,7 @@ const MainDashBoard = () => {
       </div>
 
       <div className=" fixed bottom-0 left-0 right-0 z-10 desktop:hidden ">
-        <FooterPanel />
+        <FooterPanel setIndex={setIndex} />
       </div>
     </div>
   );

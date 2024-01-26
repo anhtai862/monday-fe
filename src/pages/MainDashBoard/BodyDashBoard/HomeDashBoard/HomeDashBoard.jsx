@@ -1,10 +1,9 @@
 import React from "react";
-import bgheader from "../../../assets/images/iconHeader/bgheader.png";
-
+import bgheader from "../../../../assets/images/iconHeader/bgheader.png";
 import MainPanel from "./MainPanel";
 import RightPanel from "./RightPanel";
 
-function BodyDashBoard() {
+function HomeDashBoard() {
   return (
     <div className=" h-screen w-full bg-[#1c1f3b] desktop:rounded-tl-lg ">
       {/* homepage header */}
@@ -72,4 +71,4 @@ function BodyDashBoard() {
   );
 }
 
-export default BodyDashBoard;
+export default HomeDashBoard;
