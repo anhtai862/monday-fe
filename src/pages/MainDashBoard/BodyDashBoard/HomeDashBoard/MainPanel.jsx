@@ -1,12 +1,12 @@
 import React from "react";
-import arrowdown from "../../../assets/images/iconHeader/arrowdown.png";
-import recently from "../../../assets/images/iconHeader/recently.png";
-import favorite from "../../../assets/images/iconHeader/favorite.png";
-import mytask from "../../../assets/images/iconHeader/mytask.png";
-import logo from "../../../assets/images/iconHeader/logo.png";
-import oclock from "../../../assets/images/iconHeader/oclock.png";
-import note from "../../../assets/images/iconHeader/note.png";
-import home2 from "../../../assets/images/iconHeader/home2.png";
+import arrowdown from "../../../../assets/images/iconHeader/arrowdown.png";
+import recently from "../../../../assets/images/iconHeader/recently.png";
+import favorite from "../../../../assets/images/iconHeader/favorite.png";
+import mytask from "../../../../assets/images/iconHeader/mytask.png";
+import logo from "../../../../assets/images/iconHeader/logo.png";
+import oclock from "../../../../assets/images/iconHeader/oclock.png";
+import note from "../../../../assets/images/iconHeader/note.png";
+import home2 from "../../../../assets/images/iconHeader/home2.png";
 
 function MainPanel() {
   return (

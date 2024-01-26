@@ -1,6 +1,6 @@
 import React from "react";
-import getting from "../../../assets/images/iconHeader/getting.png";
-import helpcenter from "../../../assets/images/iconHeader/helpcenter.png";
+import getting from "../../../../assets/images/iconHeader/getting.png";
+import helpcenter from "../../../../assets/images/iconHeader/helpcenter.png";
 
 function RightPanel() {
   return (

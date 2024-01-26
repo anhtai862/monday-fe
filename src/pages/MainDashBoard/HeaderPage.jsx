@@ -3,12 +3,26 @@ import logo from "../../assets/images/iconHeader/logo.png";
 import installProduct from "../../assets/images/iconHeader/installProduct.png";
 import noti from "../../assets/images/iconHeader/noti.png";
 import inbox from "../../assets/images/iconHeader/inbox.png";
-import invite from "../../assets/images/iconHeader/invite.png";
 import app from "../../assets/images/iconHeader/app.png";
-import search from "../../assets/images/iconHeader/search.png";
 import help from "../../assets/images/iconHeader/help.png";
+import invite from "../../assets/images/iconHeader/invite.png";
+import search from "../../assets/images/iconHeader/search.png";
+import HeaderMyWorkMobile from "./HeaderMobile/HeaderMyWorkMobile";
+import HeaderHomeMobile from "./HeaderMobile/HeaderHomeMobile";
 
-function HeaderPage() {
+function HeaderPage({ headerOfPage }) {
+  const renderHeaderMobile = () => {
+    switch (headerOfPage) {
+      case "home":
+        return <HeaderHomeMobile />;
+      case "mywork":
+        return <HeaderMyWorkMobile />;
+
+      default:
+        break;
+    }
+  };
+
   return (
     <div className=" z-10 justify-between bg-[#292f4c] font-figtree text-white  desktop:fixed desktop:left-0 desktop:right-0 desktop:top-0 desktop:inline-flex desktop:min-h-12 desktop:pl-1 desktop:pr-6">
       {/* left */}
@@ -47,37 +61,7 @@ function HeaderPage() {
         </div>
       </div>
       {/* mobile */}
-      <div className="fixed left-0 right-0 top-0 flex items-center justify-between bg-[#1c1f3b] px-4  py-2 tablet:px-6  tablet:py-4 desktop:hidden">
-        <img
-          src="https://assets-global.website-files.com/611229cc97f64a4a558cf3f7/6303601b30903d1889705916_monday_white.png"
-          alt=""
-          className="h-5 cursor-pointer tablet:h-8"
-        />
-        <div className="flex items-center justify-center gap-2">
-          <div className=" rounded hover:bg-[#4b4e69]">
-            <span className="inline-flex ">
-              <button className=" flex h-8 w-8 items-center justify-center  tablet:h-10 tablet:w-10">
-                <img
-                  src={search}
-                  alt="Notifications"
-                  className="h-5 w-5 tablet:h-6 tablet:w-6"
-                />
-              </button>
-            </span>
-          </div>
-          <div className=" rounded hover:bg-[#4b4e69]">
-            <span className="inline-flex ">
-              <button className=" flex h-8 w-8 items-center justify-center  tablet:h-10 tablet:w-10">
-                <img
-                  src={invite}
-                  alt="Notifications"
-                  className="h-5 w-5 tablet:h-6 tablet:w-6"
-                />
-              </button>
-            </span>
-          </div>
-        </div>
-      </div>
+      {renderHeaderMobile()}
       {/* mobile */}
       {/* desktop right */}
       {/* 1 */}
