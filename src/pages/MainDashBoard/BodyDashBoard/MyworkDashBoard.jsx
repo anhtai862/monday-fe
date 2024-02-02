@@ -8,6 +8,9 @@ import namecell from "../../../assets/images/iconHeader/namecell.png";
 import plus from "../../../assets/images/iconHeader/plus.png";
 
 function MyworkDashBoard() {
+  const handlemodal = () => {
+    console.log("hihi");
+  };
   return (
     <div className="flex h-full w-full flex-col bg-[#181b34] px-3 laptop:rounded-tl-lg laptop:px-0">
       {/* laptop header screen */}
@@ -183,10 +186,13 @@ function MyworkDashBoard() {
             {/* 2 */}
           </div>
           <div className=" top-[76px] grid grid-cols-[minmax(auto,_603px)_minmax(auto,_65px)_minmax(auto,_180px)_minmax(auto,_210px)_minmax(auto,_120px)_minmax(auto,_140px)_minmax(auto,_140px)_minmax(auto,_140px)] items-center  hover:cursor-pointer  ">
-            <div className="  col-[1/_auto] flex h-9 w-full items-center justify-start rounded-bl-[10px] border border-l-[6px] border-r-0 border-hoverDarkmode border-l-[#579bfc] bg-[#30324e] px-6 ">
+            <button
+              onClick={handlemodal}
+              className="  col-[1/_auto] flex h-9 w-full items-center justify-start rounded-bl-[10px] border border-l-[6px] border-r-0 border-hoverDarkmode border-l-[#579bfc] bg-[#30324e] px-6 "
+            >
               <img src={plus} alt="" />
               <span>Add Item</span>
-            </div>
+            </button>
             <div className="col-[2/_auto] flex h-9 w-full  items-center justify-center border-y border-hoverDarkmode bg-[#30324e] "></div>
             <div className="  col-[3/_auto] flex h-9 w-full  items-center justify-center border-y border-hoverDarkmode bg-[#30324e] "></div>
             <div className="col-[4/_auto] flex h-9 w-full  items-center justify-center border-y border-hoverDarkmode bg-[#30324e] "></div>

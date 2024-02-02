@@ -7,6 +7,7 @@ import close from "../../assets/images/iconHeader/close.png";
 import FooterPanel from "./FooterPanel";
 import HomeDashBoard from "./BodyDashBoard/HomeDashBoard/HomeDashBoard";
 import MyworkDashBoard from "./BodyDashBoard/MyworkDashBoard";
+import ModalAddItem from "./ModalAddItem";
 
 const MainDashBoard = () => {
   const [index, setIndex] = useState("home");
@@ -23,6 +24,10 @@ const MainDashBoard = () => {
   };
   return (
     <div className=" relative h-screen  bg-[#292f4c] font-figtree text-whiteDarkmode">
+      {/* modal add item */}
+      <div className="z-10 flex items-center justify-center laptop:absolute laptop:bottom-8 laptop:h-full laptop:w-full laptop:bg-[#292f4cb3] ">
+        <ModalAddItem />
+      </div>
       <HeaderPage headerOfPage={index} />
       <div className=" mt-[49px] h-full gap-3 tablet:mt-[72px] desktop:mt-12 desktop:flex">
         <SubNav setIndex={setIndex} />

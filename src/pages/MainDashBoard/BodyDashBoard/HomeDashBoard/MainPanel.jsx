@@ -10,7 +10,7 @@ import home2 from "../../../../assets/images/iconHeader/home2.png";
 
 function MainPanel() {
   return (
-    <div className="gap-2desktop:max-w-[1160px] flex h-full w-full flex-col items-center  gap-3 px-4  py-2 desktop:items-start desktop:gap-10 desktop:rounded-lg desktop:bg-[#30324e] desktop:p-6">
+    <div className="gap-2desktop:max-w-[1160px] flex w-full flex-col items-center  gap-3 px-4  py-2 desktop:items-start desktop:gap-10 desktop:rounded-lg desktop:bg-[#30324e] desktop:p-6">
       {/*Recently*/}
 
       <div className=" w-full  rounded-lg border border-hoverDarkmode bg-[#30324e] p-2 hover:border-transparent hover:shadow-card  desktop:gap-0 desktop:border-none desktop:bg-transparent desktop:shadow-none ">
