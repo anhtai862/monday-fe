@@ -61,7 +61,7 @@ function HomeDashBoard() {
         </div>
       </div>
       {/* content body */}
-      <div className="flex laptop:px-[20px] desktop:gap-6 desktop:px-[80px] desktop:pt-4 ">
+      <div className="flex h-full laptop:px-[20px] desktop:gap-6 desktop:px-[80px] desktop:pt-4 ">
         {/* main panel header */}
         <MainPanel />
         {/* right panel header */}
